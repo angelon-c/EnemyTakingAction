@@ -2,7 +2,10 @@
 // Created by Victor Navarro on 13/02/24.
 //
 #include "Enemy.h"
+
+#include <climits>
 #include <iostream>
+#include <vector>
 
 
 using namespace std;
@@ -45,4 +48,15 @@ Character* Enemy::getTarget(vector<Player *> teamMembers) {
 
     return teamMembers[targetIndex];
 }
+ActionResult Enemy::takeaction(vector<Player*> players) {
+    Character* target = nullptr;
+    bool fleed = false;
+    target = getTarget(players);
+    doAttack(target);
+    return ActionResult(target, fleed);
+}
+
+
+
+
 
