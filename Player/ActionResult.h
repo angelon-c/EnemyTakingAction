@@ -7,7 +7,6 @@
 #define RPG_ACTIONRESULT_H
 
 
-class Character;
 
 struct ActionResult {
     Character *target = nullptr;

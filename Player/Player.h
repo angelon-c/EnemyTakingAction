@@ -8,6 +8,7 @@
 #include "../Character/Character.h"
 #include "../Enemy/Enemy.h"
 #include "./ActionResult.h"
+#include <vector>
 
 class Enemy;
 

@@ -67,19 +67,22 @@ void Combat::doCombat() {
             }
             else {
                 //TODO: Hacer refactor de esta seccion del codigo para usar el metodo takeAction
-                target = ((Enemy*)*participant)->getTarget(teamMembers);
-                (*participant)->doAttack(target);
-                if(target->getHealth() <= 0) {
-                    participant = participants.erase(remove(participants.begin(), participants.end(), target), participants.end());
-                    if(target->getIsPlayer()) {
-                        teamMembers.erase(remove(teamMembers.begin(), teamMembers.end(), target), teamMembers.end());
+
+
+                ActionResult enemyAction = ((Enemy*)*participant)->takeaction(teamMembers);
+                if (enemyAction.target && enemyAction.target->getHealth() <= 0) {
+                    if (enemyAction.target->getIsPlayer()) {
+                        participant = participants.erase(remove(participants.begin(), participants.end(), enemyAction.target), participants.end());
+                        enemies.erase(remove(enemies.begin(), enemies.end(), enemyAction.target), enemies.end());
+                        return;
                     }
-                    else {
-                        enemies.erase(remove(enemies.begin(), enemies.end(), target), enemies.end());
-                    }
+                } else if (enemyAction.fleed) {
+                    return;  // Terminar el bucle si el enemigo huyó
                 } else {
                     participant++;
                 }
+
+
             }
 
         }
