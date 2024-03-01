@@ -77,7 +77,8 @@ void Combat::doCombat() {
                         return;
                     }
                 } else if (enemyAction.fleed) {
-                    return;  // Terminar el bucle si el enemigo huyó
+                    participant = participants.erase(remove(participants.begin(), participants.end(), ((Enemy*)*participant)), participants.end());
+                    enemies.erase(remove(enemies.begin(), enemies.end(), ((Enemy*)*participant)), enemies.end());
                 } else {
                     participant++;
                 }

@@ -51,8 +51,26 @@ Character* Enemy::getTarget(vector<Player *> teamMembers) {
 ActionResult Enemy::takeaction(vector<Player*> players) {
     Character* target = nullptr;
     bool fleed = false;
-    target = getTarget(players);
-    doAttack(target);
+    if (getHealth()<0.15 * getmaxHealth()) {
+        if (rand()% 100< 60) {
+            vector <Character*> characters (players.begin(),players.end());
+            fleed= flee(characters);
+            if (fleed) {
+                cout<<"Enemy has fleed"<<endl;
+            }
+            else {
+                cout <<"Enemy tried to flee but failed"<<endl;
+            }
+        }
+        else {
+            target = getTarget(players);
+            doAttack(target);
+        }
+    } else {
+        target = getTarget(players);
+        doAttack(target);
+    }
+
     return ActionResult(target, fleed);
 }
 

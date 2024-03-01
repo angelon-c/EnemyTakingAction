@@ -8,9 +8,7 @@
 using namespace std;
 using namespace combat_utils;
 
-bool compareSpeed(Enemy *a, Enemy *b) {
-    return a->getSpeed() > b->getSpeed();
-}
+
 
 Player::Player(string name, int health, int attack, int defense, int speed) : Character(name, health, attack, defense, speed, true) {
     experience = 0;
@@ -32,23 +30,6 @@ void Player::takeDamage(int damage) {
     else {
         cout<<"You have taken " << damage << " damage" << endl;
     }
-}
-
-bool Player::flee(vector<Enemy*> enemies) {
-    std::sort(enemies.begin(), enemies.end(), compareSpeed);
-    Enemy* fastestEnemy = enemies[0];
-    bool fleed = false;
-    if(this->getSpeed() > fastestEnemy->getSpeed()) {
-        fleed =  true;
-    }
-    else {
-        srand(time(NULL));
-        int chance = rand() % 100;
-        cout<< "chance: " << chance << endl;
-        fleed = chance > 99;
-    }
-
-    return fleed;
 }
 
 void Player::emote() {
@@ -95,8 +76,9 @@ ActionResult Player::takeAction(vector<Enemy*>enemies) {
             target = getTarget(enemies);
             doAttack(target);
             break;
-        case 2:
-            fleed = flee(enemies);
+        case 2: {
+            vector <Character*> characters (enemies.begin(),enemies.end());
+            fleed = flee(characters);
             if(fleed) {
                 cout<<"You have fled"<<endl;
             }
@@ -104,6 +86,7 @@ ActionResult Player::takeAction(vector<Enemy*>enemies) {
                 cout<<"You couldn't flee"<<endl;
             }
             break;
+        }
         default:
             cout<<"Invalid option"<<endl;
             break;

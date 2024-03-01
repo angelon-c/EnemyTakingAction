@@ -3,6 +3,12 @@
 //
 #include "Character.h"
 
+#include "../Player/Player.h"
+#include <algorithm>
+#include <vector>
+#include<iostream>
+
+
 Character::Character(string _name, int _health, int _attack, int _defense, int _speed, bool _isPlayer) {
     name = _name;
     health = _health;
@@ -10,6 +16,7 @@ Character::Character(string _name, int _health, int _attack, int _defense, int _
     defense = _defense;
     speed = _speed;
     isPlayer = _isPlayer;
+    maxHealth= _health;
 }
 
 void Character::setName(string _name) {
@@ -58,4 +65,25 @@ string Character::toString() {
 
 bool Character::getIsPlayer() {
     return isPlayer;
+}
+bool Character::flee(vector<Character*> participants) {
+    std::sort(participants.begin(), participants.end(), compareSpeed);
+    Character* FastestChar = participants[0];
+    bool fleed = false;
+    if(this->getSpeed() > FastestChar->getSpeed()) {
+        fleed =  true;
+    }
+    else {
+        srand(time(NULL));
+        int chance = rand() % 100;
+        cout<< "chance: " << chance << endl;
+        fleed = chance > 50;
+    }
+    return fleed;
+}
+bool Character::compareSpeed(Character *a, Character *b) {
+    return a->getSpeed() > b->getSpeed();
+}
+int Character::getmaxHealth() {
+    return maxHealth;
 }

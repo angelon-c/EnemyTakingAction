@@ -5,6 +5,7 @@
 #ifndef RPG_CHARACTER_H
 #define RPG_CHARACTER_H
 #include<string>
+#include <vector>
 
 using namespace std;
 
@@ -16,7 +17,7 @@ protected:
     int defense;
     int speed;
     bool isPlayer;
-
+    int maxHealth;
 public:
     Character(string, int, int, int, int, bool);
 
@@ -35,6 +36,11 @@ public:
     int getSpeed();
     string toString();
     bool getIsPlayer();
+    bool flee(vector<Character*> enemies);
+    static bool compareSpeed(Character *a, Character *b);
+    void setmaxHeaalth(int);
+    int getmaxHealth();
+
 };
 
 

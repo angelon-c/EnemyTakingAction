@@ -138,16 +138,16 @@ CMakeFiles/rpg.dir/main.cpp.o: /home/angel/poo/rpg-example/main.cpp \
  /home/angel/poo/rpg-example/Enemy/Enemy.h \
  /home/angel/poo/rpg-example/Enemy/EnemyActionResult.h \
  /home/angel/poo/rpg-example/Enemy/../Character/Character.h \
- /home/angel/poo/rpg-example/Enemy/../Player/Player.h \
- /home/angel/poo/rpg-example/Enemy/../Player/../Character/Character.h \
- /home/angel/poo/rpg-example/Enemy/../Player/../Enemy/Enemy.h \
- /home/angel/poo/rpg-example/Enemy/../Player/./ActionResult.h \
- /home/angel/poo/rpg-example/Enemy/../Player/./../Character/Character.h \
  /usr/include/c++/13.2.1/vector \
  /usr/include/c++/13.2.1/bits/stl_uninitialized.h \
  /usr/include/c++/13.2.1/bits/stl_vector.h \
  /usr/include/c++/13.2.1/bits/stl_bvector.h \
  /usr/include/c++/13.2.1/bits/vector.tcc \
+ /home/angel/poo/rpg-example/Enemy/../Player/Player.h \
+ /home/angel/poo/rpg-example/Enemy/../Player/../Character/Character.h \
+ /home/angel/poo/rpg-example/Enemy/../Player/../Enemy/Enemy.h \
+ /home/angel/poo/rpg-example/Enemy/../Player/./ActionResult.h \
+ /home/angel/poo/rpg-example/Enemy/../Player/./../Character/Character.h \
  /home/angel/poo/rpg-example/Player/Player.h \
  /home/angel/poo/rpg-example/Combat/Combat.h \
  /home/angel/poo/rpg-example/Combat/../Character/Character.h \
