@@ -14,5 +14,4 @@ add_executable(rpg main.cpp
         Combat/Combat.h
         Utils.h
         Player/ActionResult.h
-        Combat/ActionResult.h
-        Enemy/EActionResult.h)
+        Enemy/EnemyActionResult.h)

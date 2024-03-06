@@ -1,4 +1,4 @@
-/home/angel/.local/share/JetBrains/Toolbox/apps/clion-nova/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" -S /home/angel/poo/rpg-example -B /home/angel/poo/rpg-example
+/home/angel/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" -S /home/angel/poo/rpg-example -B /home/angel/poo/rpg-example
 CMake Deprecation Warning:
   Support for "Extra Generators" like
 

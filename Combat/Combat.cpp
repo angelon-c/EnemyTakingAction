@@ -60,21 +60,25 @@ void Combat::doCombat() {
                     participant = participants.erase(remove(participants.begin(), participants.end(), playerAction.target), participants.end());
                     enemies.erase(remove(enemies.begin(), enemies.end(), playerAction.target), enemies.end());
                 } else if (playerAction.fleed) {
+                    participant = participants.erase(remove(participants.begin(), participants.end(), (Player*)*participant), participants.end());
+                    teamMembers.erase(remove(teamMembers.begin(), teamMembers.end(), (Player*)*participant), teamMembers.end());
                     return;
                 } else {
                     participant++;
                 }
             }
             else {
-                //TODO: Hacer refactor de esta seccion del codigo para usar el metodo takeAction
-
 
                 ActionResult enemyAction = ((Enemy*)*participant)->takeaction(teamMembers);
                 if (enemyAction.target && enemyAction.target->getHealth() <= 0) {
                     if (enemyAction.target->getIsPlayer()) {
                         participant = participants.erase(remove(participants.begin(), participants.end(), enemyAction.target), participants.end());
+                        teamMembers.erase(remove(teamMembers.begin(), teamMembers.end(), enemyAction.target), teamMembers.end());
+
+                    }
+                    else {
+                        participant = participants.erase(remove(participants.begin(), participants.end(), enemyAction.target), participants.end());
                         enemies.erase(remove(enemies.begin(), enemies.end(), enemyAction.target), enemies.end());
-                        return;
                     }
                 } else if (enemyAction.fleed) {
                     participant = participants.erase(remove(participants.begin(), participants.end(), ((Enemy*)*participant)), participants.end());
