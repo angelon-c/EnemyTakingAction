@@ -60,9 +60,12 @@ void Combat::doCombat() {
                     participant = participants.erase(remove(participants.begin(), participants.end(), playerAction.target), participants.end());
                     enemies.erase(remove(enemies.begin(), enemies.end(), playerAction.target), enemies.end());
                 } else if (playerAction.fleed) {
-                    participant = participants.erase(remove(participants.begin(), participants.end(), (Player*)*participant), participants.end());
-                    teamMembers.erase(remove(teamMembers.begin(), teamMembers.end(), (Player*)*participant), teamMembers.end());
-                    return;
+                    teamMembers.erase(remove(teamMembers.begin(), teamMembers.end(), ((Player*)*participant)), teamMembers.end());
+                    participant = participants.erase(remove(participants.begin(), participants.end(), ((Player*)*participant)), participants.end());
+
+                    if (teamMembers.size() == 0) {
+                        break;
+                    }
                 } else {
                     participant++;
                 }
