@@ -60,7 +60,9 @@ void Enemy::flee(vector<Player*> players) {
         srand(time(NULL));
         int chance = rand()%100;
         cout << "chance: " << chance << endl;fleed - chance >99;
+        fleed = chance > 99;
     }
+    this->fleed = fleed;
 }
 
 
@@ -126,3 +128,4 @@ Action Enemy::takeAction(vector<Player *> player) {
 
 
 
+2
