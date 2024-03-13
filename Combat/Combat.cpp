@@ -98,13 +98,19 @@ void Combat::executeActions() {
         Action currentAction = actions.top();
         currentAction.action();
         checkForFlee(currentAction.subscriber);
+
         checkParticipantStatus(currentAction.subscriber);
         checkParticipantStatus(currentAction.target);
+
         actions.pop();
     }
 }
 
 void Combat::checkParticipantStatus(Character* participant) {
+
+    if (participant== nullptr) {
+        return;
+    }
     if(participant->getHealth() <= 0) {
         if(participant->getIsPlayer()) {
             teamMembers.erase(remove(teamMembers.begin(), teamMembers.end(), participant), teamMembers.end());
@@ -121,13 +127,15 @@ void Combat::checkForFlee(Character *character) {
     if(fleed) {
         if(character->getIsPlayer()) {
             cout<<"You have fled the combat"<<endl;
+            participants.erase(remove(participants.begin(), participants.end(), character), participants.end());
             teamMembers.erase(remove(teamMembers.begin(), teamMembers.end(), character), teamMembers.end());
 
         }
         else {
             cout<<character->getName()<<" has fled the combat"<<endl;
+            participants.erase(remove(participants.begin(), participants.end(), character), participants.end());
             enemies.erase(remove(enemies.begin(), enemies.end(), character), enemies.end());
         }
-        participants.erase(remove(participants.begin(), participants.end(), character), participants.end());
+        //participants.erase(remove(participants.begin(), participants.end(), character), participants.end());
     }
 }

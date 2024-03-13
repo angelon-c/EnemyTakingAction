@@ -108,8 +108,10 @@ Action Player::takeAction(vector<Enemy *> enemies) {
             };
             break;
         case 2:
+
             myAction.action = [this, enemies]() {
                 flee(enemies);
+
             };
             break;
         default:
