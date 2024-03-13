@@ -88,6 +88,9 @@
 		<Unit filename="/home/angel/poo/rpg-example/Character/Character.h">
 			<Option target="rpg"/>
 		</Unit>
+		<Unit filename="/home/angel/poo/rpg-example/Combat/Action.h">
+			<Option target="rpg"/>
+		</Unit>
 		<Unit filename="/home/angel/poo/rpg-example/Combat/Combat.cpp">
 			<Option target="rpg"/>
 		</Unit>
@@ -98,12 +101,6 @@
 			<Option target="rpg"/>
 		</Unit>
 		<Unit filename="/home/angel/poo/rpg-example/Enemy/Enemy.h">
-			<Option target="rpg"/>
-		</Unit>
-		<Unit filename="/home/angel/poo/rpg-example/Enemy/EnemyActionResult.h">
-			<Option target="rpg"/>
-		</Unit>
-		<Unit filename="/home/angel/poo/rpg-example/Player/ActionResult.h">
 			<Option target="rpg"/>
 		</Unit>
 		<Unit filename="/home/angel/poo/rpg-example/Player/Player.cpp">

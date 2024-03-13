@@ -7,7 +7,8 @@
 
 #include "../Character/Character.h"
 #include "../Enemy/Enemy.h"
-#include "./ActionResult.h"
+#include "../Combat/Action.h"
+
 #include <vector>
 
 class Enemy;
@@ -24,7 +25,8 @@ public:
     void emote();
     void levelUp();
     void gainExperience(int);
-    ActionResult takeAction(vector<Enemy*> enemies);
+    void flee(vector<Enemy*> enemies);
+    Action takeAction(vector<Enemy*> enemies);
 };
 
 

@@ -136,22 +136,39 @@ CMakeFiles/rpg.dir/main.cpp.o: /home/angel/poo/rpg-example/main.cpp \
  /usr/include/c++/13.2.1/bits/ostream.tcc /usr/include/c++/13.2.1/istream \
  /usr/include/c++/13.2.1/bits/istream.tcc \
  /home/angel/poo/rpg-example/Enemy/Enemy.h \
- /home/angel/poo/rpg-example/Enemy/EnemyActionResult.h \
- /home/angel/poo/rpg-example/Enemy/../Character/Character.h \
- /usr/include/c++/13.2.1/vector \
+ /home/angel/poo/rpg-example/Enemy/../Combat/Action.h \
+ /usr/include/c++/13.2.1/functional \
+ /usr/include/c++/13.2.1/bits/std_function.h \
+ /usr/include/c++/13.2.1/unordered_map \
+ /usr/include/c++/13.2.1/bits/unordered_map.h \
+ /usr/include/c++/13.2.1/bits/hashtable.h \
+ /usr/include/c++/13.2.1/bits/hashtable_policy.h \
+ /usr/include/c++/13.2.1/ext/aligned_buffer.h \
+ /usr/include/c++/13.2.1/bits/enable_special_members.h \
+ /usr/include/c++/13.2.1/bits/node_handle.h \
+ /usr/include/c++/13.2.1/bits/erase_if.h /usr/include/c++/13.2.1/vector \
  /usr/include/c++/13.2.1/bits/stl_uninitialized.h \
  /usr/include/c++/13.2.1/bits/stl_vector.h \
  /usr/include/c++/13.2.1/bits/stl_bvector.h \
- /usr/include/c++/13.2.1/bits/vector.tcc \
+ /usr/include/c++/13.2.1/bits/vector.tcc /usr/include/c++/13.2.1/array \
+ /usr/include/c++/13.2.1/compare /usr/include/c++/13.2.1/bits/stl_algo.h \
+ /usr/include/c++/13.2.1/bits/algorithmfwd.h \
+ /usr/include/c++/13.2.1/bits/stl_heap.h \
+ /usr/include/c++/13.2.1/bits/uniform_int_dist.h \
+ /usr/include/c++/13.2.1/bits/stl_tempbuf.h \
+ /home/angel/poo/rpg-example/Enemy/../Combat/../Character/Character.h \
+ /home/angel/poo/rpg-example/Enemy/../Character/Character.h \
  /home/angel/poo/rpg-example/Enemy/../Player/Player.h \
  /home/angel/poo/rpg-example/Enemy/../Player/../Character/Character.h \
  /home/angel/poo/rpg-example/Enemy/../Player/../Enemy/Enemy.h \
- /home/angel/poo/rpg-example/Enemy/../Player/./ActionResult.h \
- /home/angel/poo/rpg-example/Enemy/../Player/./../Character/Character.h \
+ /home/angel/poo/rpg-example/Enemy/../Player/../Combat/Action.h \
  /home/angel/poo/rpg-example/Player/Player.h \
  /home/angel/poo/rpg-example/Combat/Combat.h \
  /home/angel/poo/rpg-example/Combat/../Character/Character.h \
  /home/angel/poo/rpg-example/Combat/../Player/Player.h \
  /home/angel/poo/rpg-example/Combat/../Enemy/Enemy.h \
- /home/angel/poo/rpg-example/Combat/../Player/ActionResult.h \
- /home/angel/poo/rpg-example/Combat/../Player/../Character/Character.h
+ /home/angel/poo/rpg-example/Combat/Action.h \
+ /usr/include/c++/13.2.1/queue /usr/include/c++/13.2.1/deque \
+ /usr/include/c++/13.2.1/bits/stl_deque.h \
+ /usr/include/c++/13.2.1/bits/deque.tcc \
+ /usr/include/c++/13.2.1/bits/stl_queue.h

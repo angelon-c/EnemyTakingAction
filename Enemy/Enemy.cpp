@@ -48,7 +48,23 @@ Character* Enemy::getTarget(vector<Player *> teamMembers) {
 
     return teamMembers[targetIndex];
 }
-ActionResult Enemy::takeaction(vector<Player*> players) {
+
+void Enemy::flee(vector<Player*> players) {
+    std::sort(players.begin(), players.end(), compareSpeed);
+    Player *fastestPlayer = players[0];
+    bool fleed = false;
+    if (this->getSpeed()>fastestPlayer->getSpeed()) {
+        fleed = true;
+    }
+    else{
+        srand(time(NULL));
+        int chance = rand()%100;
+        cout << "chance: " << chance << endl;fleed - chance >99;
+    }
+}
+
+
+/*Action Enemy::takeaction(vector<Player*> players) {
     Character* target = nullptr;
     bool fleed = false;
     if (getHealth()<0.15 * getmaxHealth()) {
@@ -72,6 +88,38 @@ ActionResult Enemy::takeaction(vector<Player*> players) {
     }
 
     return ActionResult(target, fleed);
+}*/
+Action Enemy::takeAction(vector<Player *> player) {
+    Action myAction;
+    myAction.speed = getSpeed();
+    myAction.subscriber = this;
+    Character* target = getTarget(player);
+    myAction.target = target;
+    //myAction.action = [this, target]() {
+      //  doAttack(target);
+    if(getHealth()<0.15*getmaxHealth())
+    {
+        if(rand()%100<5)
+        {
+            myAction.action = [this, player]() {
+                flee(player);
+            };
+        }
+        else
+        {
+            myAction.action = [this, target]() {
+                doAttack(target);
+            };
+        }
+    }
+    else
+    {
+        myAction.action = [this, target]() {
+            doAttack(target);
+        };
+    }
+
+    return myAction;
 }
 
 

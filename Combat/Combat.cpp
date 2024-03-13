@@ -42,58 +42,28 @@ void Combat::addParticipant(Character *participant) {
     }
 }
 
+
 void Combat::prepareCombat() {
     sort(participants.begin(), participants.end(), compareSpeed);
+}
+
+
+
+string Combat::participantsToString() {
+    string result = "";
+    for (int i = 0; i < participants.size(); i++) {
+        result += participants[i]->toString() + "\n";
+    }
+    return result;
 }
 
 void Combat::doCombat() {
     prepareCombat();
 
+    //Este while es 1 iteracion por ronda
     while(enemies.size() != 0 && teamMembers.size() != 0) {
-        vector<Character*>::iterator participant = participants.begin();
-
-        while(participant != participants.end()) {
-            Character* target = nullptr;
-            if((*participant)->getIsPlayer()){
-                ActionResult playerAction = ((Player*)*participant)->takeAction(enemies);
-                if(playerAction.target && playerAction.target->getHealth() <= 0) {
-                    participant = participants.erase(remove(participants.begin(), participants.end(), playerAction.target), participants.end());
-                    enemies.erase(remove(enemies.begin(), enemies.end(), playerAction.target), enemies.end());
-                } else if (playerAction.fleed) {
-                    teamMembers.erase(remove(teamMembers.begin(), teamMembers.end(), ((Player*)*participant)), teamMembers.end());
-                    participant = participants.erase(remove(participants.begin(), participants.end(), ((Player*)*participant)), participants.end());
-
-                    if (teamMembers.size() == 0) {
-                        break;
-                    }
-                } else {
-                    participant++;
-                }
-            }
-            else {
-
-                ActionResult enemyAction = ((Enemy*)*participant)->takeaction(teamMembers);
-                if (enemyAction.target && enemyAction.target->getHealth() <= 0) {
-                    if (enemyAction.target->getIsPlayer()) {
-                        participant = participants.erase(remove(participants.begin(), participants.end(), enemyAction.target), participants.end());
-                        teamMembers.erase(remove(teamMembers.begin(), teamMembers.end(), enemyAction.target), teamMembers.end());
-
-                    }
-                    else {
-                        participant = participants.erase(remove(participants.begin(), participants.end(), enemyAction.target), participants.end());
-                        enemies.erase(remove(enemies.begin(), enemies.end(), enemyAction.target), enemies.end());
-                    }
-                } else if (enemyAction.fleed) {
-                    participant = participants.erase(remove(participants.begin(), participants.end(), ((Enemy*)*participant)), participants.end());
-                    enemies.erase(remove(enemies.begin(), enemies.end(), ((Enemy*)*participant)), enemies.end());
-                } else {
-                    participant++;
-                }
-
-
-            }
-
-        }
+        registerActions();
+        executeActions();
     }
 
     //No se imprime el nombre del ganador
@@ -105,10 +75,59 @@ void Combat::doCombat() {
     }
 }
 
-string Combat::participantsToString() {
-    string result = "";
-    for (int i = 0; i < participants.size(); i++) {
-        result += participants[i]->toString() + "\n";
+void Combat::registerActions() {
+    vector<Character*>::iterator participant = participants.begin();
+    //Una iteracion por turno de cada participante (player y enemigo)
+    while(participant != participants.end()) {
+        Character* target = nullptr;
+        Action currentAction;
+        if((*participant)->getIsPlayer()) {
+            currentAction = ((Player*)*participant)->takeAction(enemies);
+        }
+        else {
+            currentAction = ((Enemy*)*participant)->takeAction(teamMembers);
+        }
+        actions.push(currentAction);
+        participant++;
     }
-    return result;
+}
+
+void Combat::executeActions() {
+    //Aqui se ejecutan las acciones
+    while(!actions.empty()) {
+        Action currentAction = actions.top();
+        currentAction.action();
+        checkForFlee(currentAction.subscriber);
+        checkParticipantStatus(currentAction.subscriber);
+        checkParticipantStatus(currentAction.target);
+        actions.pop();
+    }
+}
+
+void Combat::checkParticipantStatus(Character* participant) {
+    if(participant->getHealth() <= 0) {
+        if(participant->getIsPlayer()) {
+            teamMembers.erase(remove(teamMembers.begin(), teamMembers.end(), participant), teamMembers.end());
+        }
+        else {
+            enemies.erase(remove(enemies.begin(), enemies.end(), participant), enemies.end());
+        }
+        participants.erase(remove(participants.begin(), participants.end(), participant), participants.end());
+    }
+}
+
+void Combat::checkForFlee(Character *character) {
+    bool fleed = character->hasFleed();
+    if(fleed) {
+        if(character->getIsPlayer()) {
+            cout<<"You have fled the combat"<<endl;
+            teamMembers.erase(remove(teamMembers.begin(), teamMembers.end(), character), teamMembers.end());
+
+        }
+        else {
+            cout<<character->getName()<<" has fled the combat"<<endl;
+            enemies.erase(remove(enemies.begin(), enemies.end(), character), enemies.end());
+        }
+        participants.erase(remove(participants.begin(), participants.end(), character), participants.end());
+    }
 }

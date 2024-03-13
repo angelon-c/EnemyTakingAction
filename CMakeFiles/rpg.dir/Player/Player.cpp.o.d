@@ -108,16 +108,30 @@ CMakeFiles/rpg.dir/Player/Player.cpp.o: \
  /usr/include/c++/13.2.1/bits/stl_bvector.h \
  /usr/include/c++/13.2.1/bits/vector.tcc \
  /home/angel/poo/rpg-example/Player/../Enemy/Enemy.h \
- /home/angel/poo/rpg-example/Player/../Enemy/EnemyActionResult.h \
+ /home/angel/poo/rpg-example/Player/../Enemy/../Combat/Action.h \
+ /usr/include/c++/13.2.1/functional \
+ /usr/include/c++/13.2.1/bits/std_function.h \
+ /usr/include/c++/13.2.1/typeinfo /usr/include/c++/13.2.1/unordered_map \
+ /usr/include/c++/13.2.1/bits/unordered_map.h \
+ /usr/include/c++/13.2.1/bits/hashtable.h \
+ /usr/include/c++/13.2.1/bits/hashtable_policy.h \
+ /usr/include/c++/13.2.1/ext/aligned_buffer.h \
+ /usr/include/c++/13.2.1/bits/enable_special_members.h \
+ /usr/include/c++/13.2.1/bits/node_handle.h \
+ /usr/include/c++/13.2.1/bits/erase_if.h /usr/include/c++/13.2.1/array \
+ /usr/include/c++/13.2.1/compare /usr/include/c++/13.2.1/bits/stl_algo.h \
+ /usr/include/c++/13.2.1/bits/algorithmfwd.h \
+ /usr/include/c++/13.2.1/bits/stl_heap.h \
+ /usr/include/c++/13.2.1/bits/uniform_int_dist.h \
+ /usr/include/c++/13.2.1/bits/stl_tempbuf.h \
+ /home/angel/poo/rpg-example/Player/../Enemy/../Combat/../Character/Character.h \
  /home/angel/poo/rpg-example/Player/../Enemy/../Character/Character.h \
  /home/angel/poo/rpg-example/Player/../Enemy/../Player/Player.h \
- /home/angel/poo/rpg-example/Player/./ActionResult.h \
- /home/angel/poo/rpg-example/Player/./../Character/Character.h \
+ /home/angel/poo/rpg-example/Player/../Combat/Action.h \
  /usr/include/c++/13.2.1/iostream /usr/include/c++/13.2.1/ostream \
  /usr/include/c++/13.2.1/ios /usr/include/c++/13.2.1/exception \
  /usr/include/c++/13.2.1/bits/exception_ptr.h \
  /usr/include/c++/13.2.1/bits/cxxabi_init_exception.h \
- /usr/include/c++/13.2.1/typeinfo \
  /usr/include/c++/13.2.1/bits/nested_exception.h \
  /usr/include/c++/13.2.1/bits/ios_base.h \
  /usr/include/c++/13.2.1/ext/atomicity.h \
@@ -151,10 +165,5 @@ CMakeFiles/rpg.dir/Player/Player.cpp.o: \
  /usr/include/c++/13.2.1/bits/istream.tcc \
  /home/angel/poo/rpg-example/Player/../Utils.h \
  /usr/include/c++/13.2.1/algorithm \
- /usr/include/c++/13.2.1/bits/stl_algo.h \
- /usr/include/c++/13.2.1/bits/algorithmfwd.h \
- /usr/include/c++/13.2.1/bits/stl_heap.h \
- /usr/include/c++/13.2.1/bits/uniform_int_dist.h \
- /usr/include/c++/13.2.1/bits/stl_tempbuf.h \
  /usr/include/c++/13.2.1/pstl/glue_algorithm_defs.h \
  /usr/include/c++/13.2.1/pstl/execution_defs.h

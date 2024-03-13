@@ -18,6 +18,7 @@ protected:
     int speed;
     bool isPlayer;
     int maxHealth;
+    bool fleed;
 public:
     Character(string, int, int, int, int, bool);
 
@@ -36,10 +37,10 @@ public:
     int getSpeed();
     string toString();
     bool getIsPlayer();
-    bool flee(vector<Character*> enemies);
     static bool compareSpeed(Character *a, Character *b);
     void setmaxHeaalth(int);
     int getmaxHealth();
+    bool hasFleed();
 
 };
 

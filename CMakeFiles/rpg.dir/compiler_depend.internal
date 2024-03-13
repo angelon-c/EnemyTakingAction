@@ -4,12 +4,12 @@
 CMakeFiles/rpg.dir/Character/Character.cpp.o
  /home/angel/poo/rpg-example/Character/Character.cpp
  /home/angel/poo/rpg-example/Character/Character.h
+ /home/angel/poo/rpg-example/Combat/Action.h
  /home/angel/poo/rpg-example/Character/Character.h
+ /home/angel/poo/rpg-example/Character/Character.h
+ /home/angel/poo/rpg-example/Combat/Action.h
  /home/angel/poo/rpg-example/Player/Player.h
  /home/angel/poo/rpg-example/Enemy/Enemy.h
- /home/angel/poo/rpg-example/Enemy/EnemyActionResult.h
- /home/angel/poo/rpg-example/Character/Character.h
- /home/angel/poo/rpg-example/Player/ActionResult.h
  /home/angel/poo/rpg-example/Player/Player.h
  /home/angel/poo/rpg-example/Character/Character.h
  /usr/include/alloca.h
@@ -76,6 +76,7 @@ CMakeFiles/rpg.dir/Character/Character.cpp.o
  /usr/include/bits/wctype-wchar.h
  /usr/include/bits/wordsize.h
  /usr/include/c++/13.2.1/algorithm
+ /usr/include/c++/13.2.1/array
  /usr/include/c++/13.2.1/backward/binders.h
  /usr/include/c++/13.2.1/bit
  /usr/include/c++/13.2.1/bits/algorithmfwd.h
@@ -91,12 +92,16 @@ CMakeFiles/rpg.dir/Character/Character.cpp.o
  /usr/include/c++/13.2.1/bits/cpp_type_traits.h
  /usr/include/c++/13.2.1/bits/cxxabi_forced.h
  /usr/include/c++/13.2.1/bits/cxxabi_init_exception.h
+ /usr/include/c++/13.2.1/bits/enable_special_members.h
+ /usr/include/c++/13.2.1/bits/erase_if.h
  /usr/include/c++/13.2.1/bits/exception.h
  /usr/include/c++/13.2.1/bits/exception_defines.h
  /usr/include/c++/13.2.1/bits/exception_ptr.h
  /usr/include/c++/13.2.1/bits/functexcept.h
  /usr/include/c++/13.2.1/bits/functional_hash.h
  /usr/include/c++/13.2.1/bits/hash_bytes.h
+ /usr/include/c++/13.2.1/bits/hashtable.h
+ /usr/include/c++/13.2.1/bits/hashtable_policy.h
  /usr/include/c++/13.2.1/bits/invoke.h
  /usr/include/c++/13.2.1/bits/ios_base.h
  /usr/include/c++/13.2.1/bits/istream.tcc
@@ -110,6 +115,7 @@ CMakeFiles/rpg.dir/Character/Character.cpp.o
  /usr/include/c++/13.2.1/bits/move.h
  /usr/include/c++/13.2.1/bits/nested_exception.h
  /usr/include/c++/13.2.1/bits/new_allocator.h
+ /usr/include/c++/13.2.1/bits/node_handle.h
  /usr/include/c++/13.2.1/bits/ostream.tcc
  /usr/include/c++/13.2.1/bits/ostream_insert.h
  /usr/include/c++/13.2.1/bits/postypes.h
@@ -119,6 +125,7 @@ CMakeFiles/rpg.dir/Character/Character.cpp.o
  /usr/include/c++/13.2.1/bits/refwrap.h
  /usr/include/c++/13.2.1/bits/requires_hosted.h
  /usr/include/c++/13.2.1/bits/std_abs.h
+ /usr/include/c++/13.2.1/bits/std_function.h
  /usr/include/c++/13.2.1/bits/stl_algo.h
  /usr/include/c++/13.2.1/bits/stl_algobase.h
  /usr/include/c++/13.2.1/bits/stl_bvector.h
@@ -137,6 +144,7 @@ CMakeFiles/rpg.dir/Character/Character.cpp.o
  /usr/include/c++/13.2.1/bits/string_view.tcc
  /usr/include/c++/13.2.1/bits/stringfwd.h
  /usr/include/c++/13.2.1/bits/uniform_int_dist.h
+ /usr/include/c++/13.2.1/bits/unordered_map.h
  /usr/include/c++/13.2.1/bits/uses_allocator.h
  /usr/include/c++/13.2.1/bits/uses_allocator_args.h
  /usr/include/c++/13.2.1/bits/utility.h
@@ -144,6 +152,7 @@ CMakeFiles/rpg.dir/Character/Character.cpp.o
  /usr/include/c++/13.2.1/cctype
  /usr/include/c++/13.2.1/cerrno
  /usr/include/c++/13.2.1/clocale
+ /usr/include/c++/13.2.1/compare
  /usr/include/c++/13.2.1/cstddef
  /usr/include/c++/13.2.1/cstdio
  /usr/include/c++/13.2.1/cstdlib
@@ -152,11 +161,13 @@ CMakeFiles/rpg.dir/Character/Character.cpp.o
  /usr/include/c++/13.2.1/debug/assertions.h
  /usr/include/c++/13.2.1/debug/debug.h
  /usr/include/c++/13.2.1/exception
+ /usr/include/c++/13.2.1/ext/aligned_buffer.h
  /usr/include/c++/13.2.1/ext/alloc_traits.h
  /usr/include/c++/13.2.1/ext/atomicity.h
  /usr/include/c++/13.2.1/ext/numeric_traits.h
  /usr/include/c++/13.2.1/ext/string_conversions.h
  /usr/include/c++/13.2.1/ext/type_traits.h
+ /usr/include/c++/13.2.1/functional
  /usr/include/c++/13.2.1/initializer_list
  /usr/include/c++/13.2.1/ios
  /usr/include/c++/13.2.1/iosfwd
@@ -175,6 +186,7 @@ CMakeFiles/rpg.dir/Character/Character.cpp.o
  /usr/include/c++/13.2.1/tuple
  /usr/include/c++/13.2.1/type_traits
  /usr/include/c++/13.2.1/typeinfo
+ /usr/include/c++/13.2.1/unordered_map
  /usr/include/c++/13.2.1/vector
  /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/atomic_word.h
  /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/c++allocator.h
@@ -216,14 +228,14 @@ CMakeFiles/rpg.dir/Combat/Combat.cpp.o
  /home/angel/poo/rpg-example/Character/Character.h
  /home/angel/poo/rpg-example/Enemy/Enemy.h
  /home/angel/poo/rpg-example/Character/Character.h
+ /home/angel/poo/rpg-example/Combat/Action.h
  /home/angel/poo/rpg-example/Character/Character.h
+ /home/angel/poo/rpg-example/Character/Character.h
+ /home/angel/poo/rpg-example/Combat/Action.h
  /home/angel/poo/rpg-example/Player/Player.h
  /home/angel/poo/rpg-example/Enemy/Enemy.h
- /home/angel/poo/rpg-example/Enemy/EnemyActionResult.h
- /home/angel/poo/rpg-example/Character/Character.h
- /home/angel/poo/rpg-example/Player/ActionResult.h
- /home/angel/poo/rpg-example/Player/ActionResult.h
  /home/angel/poo/rpg-example/Player/Player.h
+ /home/angel/poo/rpg-example/Combat/Action.h
  /home/angel/poo/rpg-example/Combat/Combat.h
  /usr/include/alloca.h
  /usr/include/asm-generic/errno-base.h
@@ -289,6 +301,7 @@ CMakeFiles/rpg.dir/Combat/Combat.cpp.o
  /usr/include/bits/wctype-wchar.h
  /usr/include/bits/wordsize.h
  /usr/include/c++/13.2.1/algorithm
+ /usr/include/c++/13.2.1/array
  /usr/include/c++/13.2.1/backward/binders.h
  /usr/include/c++/13.2.1/bit
  /usr/include/c++/13.2.1/bits/algorithmfwd.h
@@ -304,12 +317,17 @@ CMakeFiles/rpg.dir/Combat/Combat.cpp.o
  /usr/include/c++/13.2.1/bits/cpp_type_traits.h
  /usr/include/c++/13.2.1/bits/cxxabi_forced.h
  /usr/include/c++/13.2.1/bits/cxxabi_init_exception.h
+ /usr/include/c++/13.2.1/bits/deque.tcc
+ /usr/include/c++/13.2.1/bits/enable_special_members.h
+ /usr/include/c++/13.2.1/bits/erase_if.h
  /usr/include/c++/13.2.1/bits/exception.h
  /usr/include/c++/13.2.1/bits/exception_defines.h
  /usr/include/c++/13.2.1/bits/exception_ptr.h
  /usr/include/c++/13.2.1/bits/functexcept.h
  /usr/include/c++/13.2.1/bits/functional_hash.h
  /usr/include/c++/13.2.1/bits/hash_bytes.h
+ /usr/include/c++/13.2.1/bits/hashtable.h
+ /usr/include/c++/13.2.1/bits/hashtable_policy.h
  /usr/include/c++/13.2.1/bits/invoke.h
  /usr/include/c++/13.2.1/bits/ios_base.h
  /usr/include/c++/13.2.1/bits/istream.tcc
@@ -323,6 +341,7 @@ CMakeFiles/rpg.dir/Combat/Combat.cpp.o
  /usr/include/c++/13.2.1/bits/move.h
  /usr/include/c++/13.2.1/bits/nested_exception.h
  /usr/include/c++/13.2.1/bits/new_allocator.h
+ /usr/include/c++/13.2.1/bits/node_handle.h
  /usr/include/c++/13.2.1/bits/ostream.tcc
  /usr/include/c++/13.2.1/bits/ostream_insert.h
  /usr/include/c++/13.2.1/bits/postypes.h
@@ -332,16 +351,19 @@ CMakeFiles/rpg.dir/Combat/Combat.cpp.o
  /usr/include/c++/13.2.1/bits/refwrap.h
  /usr/include/c++/13.2.1/bits/requires_hosted.h
  /usr/include/c++/13.2.1/bits/std_abs.h
+ /usr/include/c++/13.2.1/bits/std_function.h
  /usr/include/c++/13.2.1/bits/stl_algo.h
  /usr/include/c++/13.2.1/bits/stl_algobase.h
  /usr/include/c++/13.2.1/bits/stl_bvector.h
  /usr/include/c++/13.2.1/bits/stl_construct.h
+ /usr/include/c++/13.2.1/bits/stl_deque.h
  /usr/include/c++/13.2.1/bits/stl_function.h
  /usr/include/c++/13.2.1/bits/stl_heap.h
  /usr/include/c++/13.2.1/bits/stl_iterator.h
  /usr/include/c++/13.2.1/bits/stl_iterator_base_funcs.h
  /usr/include/c++/13.2.1/bits/stl_iterator_base_types.h
  /usr/include/c++/13.2.1/bits/stl_pair.h
+ /usr/include/c++/13.2.1/bits/stl_queue.h
  /usr/include/c++/13.2.1/bits/stl_tempbuf.h
  /usr/include/c++/13.2.1/bits/stl_uninitialized.h
  /usr/include/c++/13.2.1/bits/stl_vector.h
@@ -350,6 +372,7 @@ CMakeFiles/rpg.dir/Combat/Combat.cpp.o
  /usr/include/c++/13.2.1/bits/string_view.tcc
  /usr/include/c++/13.2.1/bits/stringfwd.h
  /usr/include/c++/13.2.1/bits/uniform_int_dist.h
+ /usr/include/c++/13.2.1/bits/unordered_map.h
  /usr/include/c++/13.2.1/bits/uses_allocator.h
  /usr/include/c++/13.2.1/bits/uses_allocator_args.h
  /usr/include/c++/13.2.1/bits/utility.h
@@ -357,6 +380,7 @@ CMakeFiles/rpg.dir/Combat/Combat.cpp.o
  /usr/include/c++/13.2.1/cctype
  /usr/include/c++/13.2.1/cerrno
  /usr/include/c++/13.2.1/clocale
+ /usr/include/c++/13.2.1/compare
  /usr/include/c++/13.2.1/cstddef
  /usr/include/c++/13.2.1/cstdio
  /usr/include/c++/13.2.1/cstdlib
@@ -364,12 +388,15 @@ CMakeFiles/rpg.dir/Combat/Combat.cpp.o
  /usr/include/c++/13.2.1/cwctype
  /usr/include/c++/13.2.1/debug/assertions.h
  /usr/include/c++/13.2.1/debug/debug.h
+ /usr/include/c++/13.2.1/deque
  /usr/include/c++/13.2.1/exception
+ /usr/include/c++/13.2.1/ext/aligned_buffer.h
  /usr/include/c++/13.2.1/ext/alloc_traits.h
  /usr/include/c++/13.2.1/ext/atomicity.h
  /usr/include/c++/13.2.1/ext/numeric_traits.h
  /usr/include/c++/13.2.1/ext/string_conversions.h
  /usr/include/c++/13.2.1/ext/type_traits.h
+ /usr/include/c++/13.2.1/functional
  /usr/include/c++/13.2.1/initializer_list
  /usr/include/c++/13.2.1/ios
  /usr/include/c++/13.2.1/iosfwd
@@ -380,6 +407,7 @@ CMakeFiles/rpg.dir/Combat/Combat.cpp.o
  /usr/include/c++/13.2.1/pstl/execution_defs.h
  /usr/include/c++/13.2.1/pstl/glue_algorithm_defs.h
  /usr/include/c++/13.2.1/pstl/pstl_config.h
+ /usr/include/c++/13.2.1/queue
  /usr/include/c++/13.2.1/stdexcept
  /usr/include/c++/13.2.1/streambuf
  /usr/include/c++/13.2.1/string
@@ -388,6 +416,7 @@ CMakeFiles/rpg.dir/Combat/Combat.cpp.o
  /usr/include/c++/13.2.1/tuple
  /usr/include/c++/13.2.1/type_traits
  /usr/include/c++/13.2.1/typeinfo
+ /usr/include/c++/13.2.1/unordered_map
  /usr/include/c++/13.2.1/vector
  /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/atomic_word.h
  /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/c++allocator.h
@@ -428,12 +457,12 @@ CMakeFiles/rpg.dir/Enemy/Enemy.cpp.o
  /home/angel/poo/rpg-example/Enemy/Enemy.cpp
  /home/angel/poo/rpg-example/Character/Character.h
  /home/angel/poo/rpg-example/Character/Character.h
- /home/angel/poo/rpg-example/Enemy/Enemy.h
+ /home/angel/poo/rpg-example/Combat/Action.h
  /home/angel/poo/rpg-example/Character/Character.h
- /home/angel/poo/rpg-example/Player/ActionResult.h
+ /home/angel/poo/rpg-example/Combat/Action.h
+ /home/angel/poo/rpg-example/Enemy/Enemy.h
  /home/angel/poo/rpg-example/Player/Player.h
  /home/angel/poo/rpg-example/Enemy/Enemy.h
- /home/angel/poo/rpg-example/Enemy/EnemyActionResult.h
  /usr/include/alloca.h
  /usr/include/asm-generic/errno-base.h
  /usr/include/asm-generic/errno.h
@@ -502,8 +531,10 @@ CMakeFiles/rpg.dir/Enemy/Enemy.cpp.o
  /usr/include/bits/wctype-wchar.h
  /usr/include/bits/wordsize.h
  /usr/include/bits/xopen_lim.h
+ /usr/include/c++/13.2.1/array
  /usr/include/c++/13.2.1/backward/binders.h
  /usr/include/c++/13.2.1/bit
+ /usr/include/c++/13.2.1/bits/algorithmfwd.h
  /usr/include/c++/13.2.1/bits/alloc_traits.h
  /usr/include/c++/13.2.1/bits/allocator.h
  /usr/include/c++/13.2.1/bits/basic_ios.h
@@ -516,12 +547,16 @@ CMakeFiles/rpg.dir/Enemy/Enemy.cpp.o
  /usr/include/c++/13.2.1/bits/cpp_type_traits.h
  /usr/include/c++/13.2.1/bits/cxxabi_forced.h
  /usr/include/c++/13.2.1/bits/cxxabi_init_exception.h
+ /usr/include/c++/13.2.1/bits/enable_special_members.h
+ /usr/include/c++/13.2.1/bits/erase_if.h
  /usr/include/c++/13.2.1/bits/exception.h
  /usr/include/c++/13.2.1/bits/exception_defines.h
  /usr/include/c++/13.2.1/bits/exception_ptr.h
  /usr/include/c++/13.2.1/bits/functexcept.h
  /usr/include/c++/13.2.1/bits/functional_hash.h
  /usr/include/c++/13.2.1/bits/hash_bytes.h
+ /usr/include/c++/13.2.1/bits/hashtable.h
+ /usr/include/c++/13.2.1/bits/hashtable_policy.h
  /usr/include/c++/13.2.1/bits/invoke.h
  /usr/include/c++/13.2.1/bits/ios_base.h
  /usr/include/c++/13.2.1/bits/istream.tcc
@@ -535,6 +570,7 @@ CMakeFiles/rpg.dir/Enemy/Enemy.cpp.o
  /usr/include/c++/13.2.1/bits/move.h
  /usr/include/c++/13.2.1/bits/nested_exception.h
  /usr/include/c++/13.2.1/bits/new_allocator.h
+ /usr/include/c++/13.2.1/bits/node_handle.h
  /usr/include/c++/13.2.1/bits/ostream.tcc
  /usr/include/c++/13.2.1/bits/ostream_insert.h
  /usr/include/c++/13.2.1/bits/postypes.h
@@ -544,20 +580,26 @@ CMakeFiles/rpg.dir/Enemy/Enemy.cpp.o
  /usr/include/c++/13.2.1/bits/refwrap.h
  /usr/include/c++/13.2.1/bits/requires_hosted.h
  /usr/include/c++/13.2.1/bits/std_abs.h
+ /usr/include/c++/13.2.1/bits/std_function.h
+ /usr/include/c++/13.2.1/bits/stl_algo.h
  /usr/include/c++/13.2.1/bits/stl_algobase.h
  /usr/include/c++/13.2.1/bits/stl_bvector.h
  /usr/include/c++/13.2.1/bits/stl_construct.h
  /usr/include/c++/13.2.1/bits/stl_function.h
+ /usr/include/c++/13.2.1/bits/stl_heap.h
  /usr/include/c++/13.2.1/bits/stl_iterator.h
  /usr/include/c++/13.2.1/bits/stl_iterator_base_funcs.h
  /usr/include/c++/13.2.1/bits/stl_iterator_base_types.h
  /usr/include/c++/13.2.1/bits/stl_pair.h
+ /usr/include/c++/13.2.1/bits/stl_tempbuf.h
  /usr/include/c++/13.2.1/bits/stl_uninitialized.h
  /usr/include/c++/13.2.1/bits/stl_vector.h
  /usr/include/c++/13.2.1/bits/streambuf.tcc
  /usr/include/c++/13.2.1/bits/streambuf_iterator.h
  /usr/include/c++/13.2.1/bits/string_view.tcc
  /usr/include/c++/13.2.1/bits/stringfwd.h
+ /usr/include/c++/13.2.1/bits/uniform_int_dist.h
+ /usr/include/c++/13.2.1/bits/unordered_map.h
  /usr/include/c++/13.2.1/bits/uses_allocator.h
  /usr/include/c++/13.2.1/bits/uses_allocator_args.h
  /usr/include/c++/13.2.1/bits/utility.h
@@ -566,6 +608,7 @@ CMakeFiles/rpg.dir/Enemy/Enemy.cpp.o
  /usr/include/c++/13.2.1/cerrno
  /usr/include/c++/13.2.1/climits
  /usr/include/c++/13.2.1/clocale
+ /usr/include/c++/13.2.1/compare
  /usr/include/c++/13.2.1/cstddef
  /usr/include/c++/13.2.1/cstdio
  /usr/include/c++/13.2.1/cstdlib
@@ -574,11 +617,13 @@ CMakeFiles/rpg.dir/Enemy/Enemy.cpp.o
  /usr/include/c++/13.2.1/debug/assertions.h
  /usr/include/c++/13.2.1/debug/debug.h
  /usr/include/c++/13.2.1/exception
+ /usr/include/c++/13.2.1/ext/aligned_buffer.h
  /usr/include/c++/13.2.1/ext/alloc_traits.h
  /usr/include/c++/13.2.1/ext/atomicity.h
  /usr/include/c++/13.2.1/ext/numeric_traits.h
  /usr/include/c++/13.2.1/ext/string_conversions.h
  /usr/include/c++/13.2.1/ext/type_traits.h
+ /usr/include/c++/13.2.1/functional
  /usr/include/c++/13.2.1/initializer_list
  /usr/include/c++/13.2.1/ios
  /usr/include/c++/13.2.1/iosfwd
@@ -595,6 +640,7 @@ CMakeFiles/rpg.dir/Enemy/Enemy.cpp.o
  /usr/include/c++/13.2.1/tuple
  /usr/include/c++/13.2.1/type_traits
  /usr/include/c++/13.2.1/typeinfo
+ /usr/include/c++/13.2.1/unordered_map
  /usr/include/c++/13.2.1/vector
  /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/atomic_word.h
  /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/c++allocator.h
@@ -638,13 +684,13 @@ CMakeFiles/rpg.dir/Enemy/Enemy.cpp.o
 CMakeFiles/rpg.dir/Player/Player.cpp.o
  /home/angel/poo/rpg-example/Player/Player.cpp
  /home/angel/poo/rpg-example/Character/Character.h
+ /home/angel/poo/rpg-example/Combat/Action.h
  /home/angel/poo/rpg-example/Character/Character.h
+ /home/angel/poo/rpg-example/Character/Character.h
+ /home/angel/poo/rpg-example/Combat/Action.h
  /home/angel/poo/rpg-example/Player/Player.h
  /home/angel/poo/rpg-example/Enemy/Enemy.h
- /home/angel/poo/rpg-example/Enemy/EnemyActionResult.h
  /home/angel/poo/rpg-example/Utils.h
- /home/angel/poo/rpg-example/Character/Character.h
- /home/angel/poo/rpg-example/Player/ActionResult.h
  /home/angel/poo/rpg-example/Player/Player.h
  /usr/include/alloca.h
  /usr/include/asm-generic/errno-base.h
@@ -710,6 +756,7 @@ CMakeFiles/rpg.dir/Player/Player.cpp.o
  /usr/include/bits/wctype-wchar.h
  /usr/include/bits/wordsize.h
  /usr/include/c++/13.2.1/algorithm
+ /usr/include/c++/13.2.1/array
  /usr/include/c++/13.2.1/backward/binders.h
  /usr/include/c++/13.2.1/bit
  /usr/include/c++/13.2.1/bits/algorithmfwd.h
@@ -725,12 +772,16 @@ CMakeFiles/rpg.dir/Player/Player.cpp.o
  /usr/include/c++/13.2.1/bits/cpp_type_traits.h
  /usr/include/c++/13.2.1/bits/cxxabi_forced.h
  /usr/include/c++/13.2.1/bits/cxxabi_init_exception.h
+ /usr/include/c++/13.2.1/bits/enable_special_members.h
+ /usr/include/c++/13.2.1/bits/erase_if.h
  /usr/include/c++/13.2.1/bits/exception.h
  /usr/include/c++/13.2.1/bits/exception_defines.h
  /usr/include/c++/13.2.1/bits/exception_ptr.h
  /usr/include/c++/13.2.1/bits/functexcept.h
  /usr/include/c++/13.2.1/bits/functional_hash.h
  /usr/include/c++/13.2.1/bits/hash_bytes.h
+ /usr/include/c++/13.2.1/bits/hashtable.h
+ /usr/include/c++/13.2.1/bits/hashtable_policy.h
  /usr/include/c++/13.2.1/bits/invoke.h
  /usr/include/c++/13.2.1/bits/ios_base.h
  /usr/include/c++/13.2.1/bits/istream.tcc
@@ -744,6 +795,7 @@ CMakeFiles/rpg.dir/Player/Player.cpp.o
  /usr/include/c++/13.2.1/bits/move.h
  /usr/include/c++/13.2.1/bits/nested_exception.h
  /usr/include/c++/13.2.1/bits/new_allocator.h
+ /usr/include/c++/13.2.1/bits/node_handle.h
  /usr/include/c++/13.2.1/bits/ostream.tcc
  /usr/include/c++/13.2.1/bits/ostream_insert.h
  /usr/include/c++/13.2.1/bits/postypes.h
@@ -753,6 +805,7 @@ CMakeFiles/rpg.dir/Player/Player.cpp.o
  /usr/include/c++/13.2.1/bits/refwrap.h
  /usr/include/c++/13.2.1/bits/requires_hosted.h
  /usr/include/c++/13.2.1/bits/std_abs.h
+ /usr/include/c++/13.2.1/bits/std_function.h
  /usr/include/c++/13.2.1/bits/stl_algo.h
  /usr/include/c++/13.2.1/bits/stl_algobase.h
  /usr/include/c++/13.2.1/bits/stl_bvector.h
@@ -771,6 +824,7 @@ CMakeFiles/rpg.dir/Player/Player.cpp.o
  /usr/include/c++/13.2.1/bits/string_view.tcc
  /usr/include/c++/13.2.1/bits/stringfwd.h
  /usr/include/c++/13.2.1/bits/uniform_int_dist.h
+ /usr/include/c++/13.2.1/bits/unordered_map.h
  /usr/include/c++/13.2.1/bits/uses_allocator.h
  /usr/include/c++/13.2.1/bits/uses_allocator_args.h
  /usr/include/c++/13.2.1/bits/utility.h
@@ -778,6 +832,7 @@ CMakeFiles/rpg.dir/Player/Player.cpp.o
  /usr/include/c++/13.2.1/cctype
  /usr/include/c++/13.2.1/cerrno
  /usr/include/c++/13.2.1/clocale
+ /usr/include/c++/13.2.1/compare
  /usr/include/c++/13.2.1/cstddef
  /usr/include/c++/13.2.1/cstdio
  /usr/include/c++/13.2.1/cstdlib
@@ -786,11 +841,13 @@ CMakeFiles/rpg.dir/Player/Player.cpp.o
  /usr/include/c++/13.2.1/debug/assertions.h
  /usr/include/c++/13.2.1/debug/debug.h
  /usr/include/c++/13.2.1/exception
+ /usr/include/c++/13.2.1/ext/aligned_buffer.h
  /usr/include/c++/13.2.1/ext/alloc_traits.h
  /usr/include/c++/13.2.1/ext/atomicity.h
  /usr/include/c++/13.2.1/ext/numeric_traits.h
  /usr/include/c++/13.2.1/ext/string_conversions.h
  /usr/include/c++/13.2.1/ext/type_traits.h
+ /usr/include/c++/13.2.1/functional
  /usr/include/c++/13.2.1/initializer_list
  /usr/include/c++/13.2.1/ios
  /usr/include/c++/13.2.1/iosfwd
@@ -809,6 +866,7 @@ CMakeFiles/rpg.dir/Player/Player.cpp.o
  /usr/include/c++/13.2.1/tuple
  /usr/include/c++/13.2.1/type_traits
  /usr/include/c++/13.2.1/typeinfo
+ /usr/include/c++/13.2.1/unordered_map
  /usr/include/c++/13.2.1/vector
  /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/atomic_word.h
  /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/c++allocator.h
@@ -849,18 +907,17 @@ CMakeFiles/rpg.dir/main.cpp.o
  /home/angel/poo/rpg-example/main.cpp
  /home/angel/poo/rpg-example/Character/Character.h
  /home/angel/poo/rpg-example/Enemy/Enemy.h
- /home/angel/poo/rpg-example/Character/Character.h
- /home/angel/poo/rpg-example/Player/ActionResult.h
  /home/angel/poo/rpg-example/Player/Player.h
+ /home/angel/poo/rpg-example/Combat/Action.h
  /home/angel/poo/rpg-example/Combat/Combat.h
  /home/angel/poo/rpg-example/Character/Character.h
  /home/angel/poo/rpg-example/Character/Character.h
- /home/angel/poo/rpg-example/Enemy/Enemy.h
+ /home/angel/poo/rpg-example/Combat/Action.h
  /home/angel/poo/rpg-example/Character/Character.h
- /home/angel/poo/rpg-example/Player/ActionResult.h
+ /home/angel/poo/rpg-example/Combat/Action.h
+ /home/angel/poo/rpg-example/Enemy/Enemy.h
  /home/angel/poo/rpg-example/Player/Player.h
  /home/angel/poo/rpg-example/Enemy/Enemy.h
- /home/angel/poo/rpg-example/Enemy/EnemyActionResult.h
  /home/angel/poo/rpg-example/Player/Player.h
  /usr/include/alloca.h
  /usr/include/asm-generic/errno-base.h
@@ -925,8 +982,10 @@ CMakeFiles/rpg.dir/main.cpp.o
  /usr/include/bits/wchar.h
  /usr/include/bits/wctype-wchar.h
  /usr/include/bits/wordsize.h
+ /usr/include/c++/13.2.1/array
  /usr/include/c++/13.2.1/backward/binders.h
  /usr/include/c++/13.2.1/bit
+ /usr/include/c++/13.2.1/bits/algorithmfwd.h
  /usr/include/c++/13.2.1/bits/alloc_traits.h
  /usr/include/c++/13.2.1/bits/allocator.h
  /usr/include/c++/13.2.1/bits/basic_ios.h
@@ -939,12 +998,17 @@ CMakeFiles/rpg.dir/main.cpp.o
  /usr/include/c++/13.2.1/bits/cpp_type_traits.h
  /usr/include/c++/13.2.1/bits/cxxabi_forced.h
  /usr/include/c++/13.2.1/bits/cxxabi_init_exception.h
+ /usr/include/c++/13.2.1/bits/deque.tcc
+ /usr/include/c++/13.2.1/bits/enable_special_members.h
+ /usr/include/c++/13.2.1/bits/erase_if.h
  /usr/include/c++/13.2.1/bits/exception.h
  /usr/include/c++/13.2.1/bits/exception_defines.h
  /usr/include/c++/13.2.1/bits/exception_ptr.h
  /usr/include/c++/13.2.1/bits/functexcept.h
  /usr/include/c++/13.2.1/bits/functional_hash.h
  /usr/include/c++/13.2.1/bits/hash_bytes.h
+ /usr/include/c++/13.2.1/bits/hashtable.h
+ /usr/include/c++/13.2.1/bits/hashtable_policy.h
  /usr/include/c++/13.2.1/bits/invoke.h
  /usr/include/c++/13.2.1/bits/ios_base.h
  /usr/include/c++/13.2.1/bits/istream.tcc
@@ -958,6 +1022,7 @@ CMakeFiles/rpg.dir/main.cpp.o
  /usr/include/c++/13.2.1/bits/move.h
  /usr/include/c++/13.2.1/bits/nested_exception.h
  /usr/include/c++/13.2.1/bits/new_allocator.h
+ /usr/include/c++/13.2.1/bits/node_handle.h
  /usr/include/c++/13.2.1/bits/ostream.tcc
  /usr/include/c++/13.2.1/bits/ostream_insert.h
  /usr/include/c++/13.2.1/bits/postypes.h
@@ -967,20 +1032,28 @@ CMakeFiles/rpg.dir/main.cpp.o
  /usr/include/c++/13.2.1/bits/refwrap.h
  /usr/include/c++/13.2.1/bits/requires_hosted.h
  /usr/include/c++/13.2.1/bits/std_abs.h
+ /usr/include/c++/13.2.1/bits/std_function.h
+ /usr/include/c++/13.2.1/bits/stl_algo.h
  /usr/include/c++/13.2.1/bits/stl_algobase.h
  /usr/include/c++/13.2.1/bits/stl_bvector.h
  /usr/include/c++/13.2.1/bits/stl_construct.h
+ /usr/include/c++/13.2.1/bits/stl_deque.h
  /usr/include/c++/13.2.1/bits/stl_function.h
+ /usr/include/c++/13.2.1/bits/stl_heap.h
  /usr/include/c++/13.2.1/bits/stl_iterator.h
  /usr/include/c++/13.2.1/bits/stl_iterator_base_funcs.h
  /usr/include/c++/13.2.1/bits/stl_iterator_base_types.h
  /usr/include/c++/13.2.1/bits/stl_pair.h
+ /usr/include/c++/13.2.1/bits/stl_queue.h
+ /usr/include/c++/13.2.1/bits/stl_tempbuf.h
  /usr/include/c++/13.2.1/bits/stl_uninitialized.h
  /usr/include/c++/13.2.1/bits/stl_vector.h
  /usr/include/c++/13.2.1/bits/streambuf.tcc
  /usr/include/c++/13.2.1/bits/streambuf_iterator.h
  /usr/include/c++/13.2.1/bits/string_view.tcc
  /usr/include/c++/13.2.1/bits/stringfwd.h
+ /usr/include/c++/13.2.1/bits/uniform_int_dist.h
+ /usr/include/c++/13.2.1/bits/unordered_map.h
  /usr/include/c++/13.2.1/bits/uses_allocator.h
  /usr/include/c++/13.2.1/bits/uses_allocator_args.h
  /usr/include/c++/13.2.1/bits/utility.h
@@ -988,6 +1061,7 @@ CMakeFiles/rpg.dir/main.cpp.o
  /usr/include/c++/13.2.1/cctype
  /usr/include/c++/13.2.1/cerrno
  /usr/include/c++/13.2.1/clocale
+ /usr/include/c++/13.2.1/compare
  /usr/include/c++/13.2.1/cstddef
  /usr/include/c++/13.2.1/cstdio
  /usr/include/c++/13.2.1/cstdlib
@@ -995,12 +1069,15 @@ CMakeFiles/rpg.dir/main.cpp.o
  /usr/include/c++/13.2.1/cwctype
  /usr/include/c++/13.2.1/debug/assertions.h
  /usr/include/c++/13.2.1/debug/debug.h
+ /usr/include/c++/13.2.1/deque
  /usr/include/c++/13.2.1/exception
+ /usr/include/c++/13.2.1/ext/aligned_buffer.h
  /usr/include/c++/13.2.1/ext/alloc_traits.h
  /usr/include/c++/13.2.1/ext/atomicity.h
  /usr/include/c++/13.2.1/ext/numeric_traits.h
  /usr/include/c++/13.2.1/ext/string_conversions.h
  /usr/include/c++/13.2.1/ext/type_traits.h
+ /usr/include/c++/13.2.1/functional
  /usr/include/c++/13.2.1/initializer_list
  /usr/include/c++/13.2.1/ios
  /usr/include/c++/13.2.1/iosfwd
@@ -1009,6 +1086,7 @@ CMakeFiles/rpg.dir/main.cpp.o
  /usr/include/c++/13.2.1/new
  /usr/include/c++/13.2.1/ostream
  /usr/include/c++/13.2.1/pstl/pstl_config.h
+ /usr/include/c++/13.2.1/queue
  /usr/include/c++/13.2.1/stdexcept
  /usr/include/c++/13.2.1/streambuf
  /usr/include/c++/13.2.1/string
@@ -1017,6 +1095,7 @@ CMakeFiles/rpg.dir/main.cpp.o
  /usr/include/c++/13.2.1/tuple
  /usr/include/c++/13.2.1/type_traits
  /usr/include/c++/13.2.1/typeinfo
+ /usr/include/c++/13.2.1/unordered_map
  /usr/include/c++/13.2.1/vector
  /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/atomic_word.h
  /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/c++allocator.h
