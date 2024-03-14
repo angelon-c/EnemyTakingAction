@@ -96,6 +96,10 @@ void Combat::executeActions() {
     //Aqui se ejecutan las acciones
     while(!actions.empty()) {
         Action currentAction = actions.top();
+        if(eraseAction(currentAction.subscriber, currentAction.target)) {
+            actions.pop();
+            continue;
+        }
         currentAction.action();
         checkForFlee(currentAction.subscriber);
 
@@ -107,6 +111,7 @@ void Combat::executeActions() {
 }
 
 void Combat::checkParticipantStatus(Character* participant) {
+
 
     if (participant== nullptr) {
         return;
@@ -127,15 +132,33 @@ void Combat::checkForFlee(Character *character) {
     if(fleed) {
         if(character->getIsPlayer()) {
             cout<<"You have fled the combat"<<endl;
-            participants.erase(remove(participants.begin(), participants.end(), character), participants.end());
             teamMembers.erase(remove(teamMembers.begin(), teamMembers.end(), character), teamMembers.end());
 
+            character->hasDied();
         }
         else {
             cout<<character->getName()<<" has fled the combat"<<endl;
-            participants.erase(remove(participants.begin(), participants.end(), character), participants.end());
             enemies.erase(remove(enemies.begin(), enemies.end(), character), enemies.end());
+            character->hasDied();
         }
-        //participants.erase(remove(participants.begin(), participants.end(), character), participants.end());
+        participants.erase(remove(participants.begin(), participants.end(), character), participants.end());
     }
+}
+bool Combat::eraseAction(Character* subscriber, Character* target){
+    bool result = false;
+    bool targetFound = false;
+    bool subsciberFound = false;
+    if(target == nullptr) targetFound = true;
+    if(subscriber == nullptr) targetFound = true;
+
+    for (int i = 0; i < participants.size(); ++i) {
+        if(target==participants[i]) {
+            targetFound = true;
+        }
+        if(subscriber==participants[i]) {
+            subsciberFound = true;
+        }
+    }
+    result = !(targetFound && subsciberFound);
+    return result;
 }

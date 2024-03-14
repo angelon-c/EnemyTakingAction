@@ -24,6 +24,7 @@ public:
     // rand() % 100 < 5 ------> intentas huir flee()
 
     //TODO: Mover metodo flee a character
+    bool hasFleed();
 };
 
 

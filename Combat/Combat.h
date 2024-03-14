@@ -29,6 +29,7 @@ private:
 
     void checkParticipantStatus(Character* participant);
     void checkForFlee(Character* character);
+    bool eraseAction(Character* subscriber, Character* target);
 public:
     Combat(vector<Character*> _participants);
     Combat(vector<Player*> _teamMembers, vector<Enemy*> _enemies);

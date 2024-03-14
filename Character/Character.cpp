@@ -18,6 +18,7 @@ Character::Character(string _name, int _health, int _attack, int _defense, int _
     isPlayer = _isPlayer;
     maxHealth= _health;
     fleed = false;
+    isDead = false;
 }
 
 
@@ -77,4 +78,7 @@ int Character::getmaxHealth() {
 }
 bool Character::hasFleed() {
     return fleed;
+}
+bool Character::hasDied() {
+    return isDead;
 }

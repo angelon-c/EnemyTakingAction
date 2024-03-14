@@ -19,6 +19,7 @@ protected:
     bool isPlayer;
     int maxHealth;
     bool fleed;
+    bool isDead;
 public:
     Character(string, int, int, int, int, bool);
 
@@ -41,6 +42,7 @@ public:
     void setmaxHeaalth(int);
     int getmaxHealth();
     bool hasFleed();
+    bool hasDied();
 
 };
 

@@ -19,6 +19,7 @@ int getRolledAttack(int attack) {
 Enemy::Enemy(string name, int health, int attack, int defense, int speed) : Character(name, health, attack, defense, speed, false) {
 }
 
+
 void Enemy::doAttack(Character *target) {
     int rolledAttack = getRolledAttack(getAttack());
     int trueDamage = target->getDefense() > rolledAttack ? 0 : rolledAttack - target->getDefense();
@@ -65,32 +66,6 @@ void Enemy::flee(vector<Player*> players) {
     this->fleed = fleed;
 }
 
-
-/*Action Enemy::takeaction(vector<Player*> players) {
-    Character* target = nullptr;
-    bool fleed = false;
-    if (getHealth()<0.15 * getmaxHealth()) {
-        if (rand()% 100< 60) {
-            vector <Character*> characters (players.begin(),players.end());
-            fleed= flee(characters);
-            if (fleed) {
-                cout<<"Enemy has fleed"<<endl;
-            }
-            else {
-                cout <<"Enemy tried to flee but failed"<<endl;
-            }
-        }
-        else {
-            target = getTarget(players);
-            doAttack(target);
-        }
-    } else {
-        target = getTarget(players);
-        doAttack(target);
-    }
-
-    return ActionResult(target, fleed);
-}*/
 Action Enemy::takeAction(vector<Player *> player) {
     Action myAction;
     myAction.speed = getSpeed();
@@ -128,4 +103,3 @@ Action Enemy::takeAction(vector<Player *> player) {
 
 
 
-2
