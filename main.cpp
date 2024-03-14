@@ -5,8 +5,8 @@
 
 int main() {
 
-    Player *player = new Player("Victor", 50, 10, 3, 30);
-    Enemy *enemy = new Enemy("Goblin", 20, 5, 3, 7);
+    Player *player = new Player("Victor", 50, 50, 3, 9);
+    Enemy *enemy = new Enemy("Goblin", 20, 9, 3, 7);
     Enemy *enemy2 = new Enemy("Orc", 30, 8, 5, 2);
 
     vector<Character*> participants;
