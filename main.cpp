@@ -9,6 +9,7 @@ int main() {
     Enemy *enemy = new Enemy("Goblin", 20, 9, 3, 7);
     Enemy *enemy2 = new Enemy("Orc", 30, 8, 5, 2);
 
+
     vector<Character*> participants;
     participants.push_back(player);
     participants.push_back(enemy);

@@ -7,10 +7,11 @@
 #include <algorithm>
 #include <vector>
 #include<iostream>
+#include <cstring>
 
 
-Character::Character(string _name, int _health, int _attack, int _defense, int _speed, bool _isPlayer) {
-    name = _name;
+Character::Character(const char * _name, int _health, int _attack, int _defense, int _speed, bool _isPlayer) {
+    strncpy(this->name,_name,20 );
     health = _health;
     attack = _attack;
     defense = _defense;
@@ -22,11 +23,12 @@ Character::Character(string _name, int _health, int _attack, int _defense, int _
 }
 
 
-void Character::setName(string _name) {
-    name = _name;
+void Character::setName(char const *_name) {
+    strncpy(this->name, name, 20);
+
 }
 
-string Character::getName() {
+const char * Character::getName(){
     return name;
 }
 
@@ -62,9 +64,9 @@ int Character::getSpeed() {
     return speed;
 }
 
-string Character::toString() {
-    return "Name: " + name + "\nHealth: " + to_string(health) + "\nAttack: " + to_string(attack) + "\nDefense: " + to_string(defense) + "\nSpeed: " + to_string(speed);
-}
+//string Character::toString() {
+  //  return "Name: " + name + "\nHealth: " + to_string(health) + "\nAttack: " + to_string(attack) + "\nDefense: " + to_string(defense) + "\nSpeed: " + to_string(speed);
+//}
 
 bool Character::getIsPlayer() {
     return isPlayer;

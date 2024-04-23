@@ -11,7 +11,7 @@ using namespace std;
 
 class Character {
 protected:
-    string name;
+    char name[20]{};
     int health;
     int attack;
     int defense;
@@ -21,13 +21,13 @@ protected:
     bool fleed;
     bool isDead;
 public:
-    Character(string, int, int, int, int, bool);
+    Character(const char *, int, int, int, int, bool);
 
     virtual void doAttack(Character *target) = 0;
     virtual void takeDamage(int damage) = 0;
 
-    void setName(string);
-    string getName();
+    void setName(char const *);
+    char const * getName();
     void setHealth(int);
     int getHealth();
     void setAttack(int);
@@ -39,7 +39,7 @@ public:
     string toString();
     bool getIsPlayer();
     static bool compareSpeed(Character *a, Character *b);
-    void setmaxHeaalth(int);
+    void setmaxHealth(int);
     int getmaxHealth();
     bool hasFleed();
     bool hasDied();
