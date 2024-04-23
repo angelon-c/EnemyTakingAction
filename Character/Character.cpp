@@ -64,9 +64,9 @@ int Character::getSpeed() {
     return speed;
 }
 
-//string Character::toString() {
-  //  return "Name: " + name + "\nHealth: " + to_string(health) + "\nAttack: " + to_string(attack) + "\nDefense: " + to_string(defense) + "\nSpeed: " + to_string(speed);
-//}
+string Character::toString() {
+    return "Name: " + string(name) + "\nHealth: " + to_string(health) + "\nAttack: " + to_string(attack) + "\nDefense: " + to_string(defense) + "\nSpeed: " + to_string(speed);
+}
 
 bool Character::getIsPlayer() {
     return isPlayer;
