@@ -49,13 +49,13 @@ void Combat::prepareCombat() {
 
 
 
-//string Combat::participantsToString() {
-  //  string result = "";
-    //for (int i = 0; i < participants.size(); i++) {
-      //  result += participants[i]->toString() + "\n";
-    //}
-    //return result;
-//}
+string Combat::participantsToString() {
+    string result = "";
+    for (int i = 0; i < participants.size(); i++) {
+        result += participants[i]->toString() + "\n";
+    }
+    return result;
+}
 
 void Combat::doCombat() {
     prepareCombat();
