@@ -45,8 +45,16 @@ void Player::levelUp() {
     size_t options;
     cout<<"Congratulations on leveling up you can choose up to 3 attributes do upgdrade with 2 points each" << endl;
    while(counter != 0){
+       if (counter==3){
+           cout<<"Pick your first attribute to upgrade"<<endl;
+       }
+       else if(counter==2){
+           cout<<"Pick your next attribute to upgrade"<<endl;
+       }
+       else{
+           cout<<"Pick your last attribute to upgrade"<<endl;
+       }
 
-       cout<<"Pick the attributes you wish to upgrade"<<endl;
        cout<<"1. Health\n2. Attack\n3. Defense\n4. speed"<<endl;
     cin >> options;
 
