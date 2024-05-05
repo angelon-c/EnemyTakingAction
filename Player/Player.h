@@ -14,10 +14,12 @@
 class Enemy;
 
 class Player: public Character {
+public:
 protected:
     int experience;
-    int level;
+
 public:
+    static const unsigned int BUFFER_SIZE = sizeof name + sizeof health + sizeof attack + sizeof defense + sizeof speed + sizeof experience + sizeof level;
     Player(const char * _name, int _health, int _attack, int _defense, int _speed);
     void doAttack(Character *target) override;
     void takeDamage(int damage) override;
@@ -27,6 +29,11 @@ public:
     void gainExperience(int);
     void flee(vector<Enemy*> enemies);
     Action takeAction(vector<Enemy*> enemies);
+    char* serialize();
+    static Player* unserialize(char* buffer);
+    int getExperienceAmount(int level);
+private:
+    char buffer[BUFFER_SIZE];
 };
 
 

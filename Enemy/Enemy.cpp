@@ -16,7 +16,8 @@ int getRolledAttack(int attack) {
     return (rand() % (attack - lowerLimit)) + lowerLimit;
 }
 
-Enemy::Enemy(const char *name, int health, int attack, int defense, int speed) : Character(name, health, attack, defense, speed, false) {
+Enemy::Enemy(const char *name, int health, int attack, int defense, int speed,int _level) : Character(name, health, attack, defense, speed, false) {
+    level=_level;
 }
 
 
@@ -98,6 +99,7 @@ Action Enemy::takeAction(vector<Player *> player) {
 
     return myAction;
 }
+
 
 
 

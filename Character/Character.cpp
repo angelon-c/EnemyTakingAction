@@ -8,6 +8,7 @@
 #include <vector>
 #include<iostream>
 #include <cstring>
+#include <cstdio>
 
 
 Character::Character(const char * _name, int _health, int _attack, int _defense, int _speed, bool _isPlayer) {
@@ -30,6 +31,10 @@ void Character::setName(char const *_name) {
 
 const char * Character::getName(){
     return name;
+}
+
+int Character::getLevel() {
+    return level;
 }
 
 void Character::setHealth(int _health) {
@@ -65,7 +70,10 @@ int Character::getSpeed() {
 }
 
 string Character::toString() {
+
     return "Name: " + string(name) + "\nHealth: " + to_string(health) + "\nAttack: " + to_string(attack) + "\nDefense: " + to_string(defense) + "\nSpeed: " + to_string(speed);
+
+
 }
 
 bool Character::getIsPlayer() {
@@ -84,3 +92,10 @@ bool Character::hasFleed() {
 bool Character::hasDied() {
     return isDead;
 }
+
+
+
+
+
+
+

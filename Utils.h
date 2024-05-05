@@ -14,4 +14,5 @@ namespace combat_utils {
     }
 }
 
+
 #endif //RPG_UTILS_H

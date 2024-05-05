@@ -20,6 +20,7 @@ protected:
     int maxHealth;
     bool fleed;
     bool isDead;
+    int level;
 public:
     Character(const char *, int, int, int, int, bool);
 
@@ -43,6 +44,8 @@ public:
     int getmaxHealth();
     bool hasFleed();
     bool hasDied();
+    int getLevel();
+
 
 };
 
