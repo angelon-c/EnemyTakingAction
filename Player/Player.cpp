@@ -41,6 +41,7 @@ void Player::emote() {
 
 void Player::levelUp() {
     level++;
+    experience-=100;
     int counter = 3;
     size_t options;
     cout<<"Congratulations on leveling up you can choose up to 3 attributes do upgdrade with 2 points each" << endl;
@@ -82,10 +83,7 @@ void Player::levelUp() {
 
 void Player::gainExperience(int exp) {
     experience += exp;
-    if (experience >= 100) {
-        levelUp();
-        experience -=100;
-    }
+
 }
 
 Character* Player::getTarget(vector<Enemy *> enemies) {
@@ -118,6 +116,9 @@ void Player::flee(vector<Enemy *> enemies) {
 
 Action Player::takeAction(vector<Enemy *> enemies) {
     int option = 0;
+    if(experience>=100)
+        levelUp();
+
     cout << "Choose an action" << endl;
     cout << "1. Attack" << endl;
     cout << "2. Flee" << endl;
