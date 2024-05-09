@@ -84,6 +84,7 @@ void Player::levelUp() {
 void Player::gainExperience(int exp) {
     experience += exp;
 
+
 }
 
 Character* Player::getTarget(vector<Enemy *> enemies) {
@@ -116,8 +117,6 @@ void Player::flee(vector<Enemy *> enemies) {
 
 Action Player::takeAction(vector<Enemy *> enemies) {
     int option = 0;
-    if(experience>=100)
-        levelUp();
 
     cout << "Choose an action" << endl;
     cout << "1. Attack" << endl;
@@ -140,10 +139,7 @@ Action Player::takeAction(vector<Enemy *> enemies) {
             //1.
             myAction.action = [this, target]() {
                 doAttack(target);
-                if(target->getHealth()<=0){
-                    gainExperience(getExperienceAmount(target->getLevel()));
 
-                }
             };
             break;
         case 2:
@@ -226,22 +222,6 @@ Player* Player::unserialize(char *_buffer) {
 
 }
 
-int Player::getExperienceAmount(int level) {
-    int experience = 0;
-    if(level>0 && level<=2){
-        experience = 10;
-    }
-    else if(level>2 && level<=4){
-        experience = 20;
-    }
-    else if(level>4 && level <= 6){
-        experience = 40;
-    }
-    else if(level>6 && level<=8){
-        experience = 80;
-    }
-    else if(level>8 && level<=10){
-        experience = 120;
-    }
+int Player::getExp() {
     return experience;
 }

@@ -20,6 +20,7 @@ public:
     Action takeAction(vector<Player*> player);
     void flee(vector<Player*> players);
     bool hasFleed();
+    void levelUp();
 };
 
 

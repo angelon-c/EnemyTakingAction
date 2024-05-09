@@ -105,6 +105,7 @@ void Combat::executeActions() {
 
         checkParticipantStatus(currentAction.subscriber);
         checkParticipantStatus(currentAction.target);
+        checkForLvlUp(currentAction.subscriber);
 
         actions.pop();
     }
@@ -121,6 +122,7 @@ void Combat::checkParticipantStatus(Character* participant) {
             teamMembers.erase(remove(teamMembers.begin(), teamMembers.end(), participant), teamMembers.end());
         }
         else {
+            expAmount = getExpAmount(participant);
             enemies.erase(remove(enemies.begin(), enemies.end(), participant), enemies.end());
         }
         participants.erase(remove(participants.begin(), participants.end(), participant), participants.end());
@@ -161,4 +163,48 @@ bool Combat::eraseAction(Character* subscriber, Character* target){
     }
     result = !(targetFound && subsciberFound);
     return result;
+}
+
+
+int Combat::getExpAmount(Character * enemy) {
+    int experience = 0;
+    if(enemy->getLevel()>0 && enemy->getLevel()<=2){
+        experience = 10;
+    }
+    else if(enemy->getLevel()>2 && enemy->getLevel()<=4){
+        experience = 20;
+    }
+    else if(enemy->getLevel()>4 && enemy->getLevel() <= 6){
+        experience = 40;
+    }
+    else if(enemy->getLevel()>6 && enemy->getLevel()<=8){
+        experience = 80;
+    }
+    else if(enemy->getLevel()>8 && enemy->getLevel()<=10){
+        experience = 120;
+    }
+    return experience;
+}
+
+void Combat::checkForLvlUp(Character *subscriber) {
+    if(subscriber->getIsPlayer()){
+        for(Player* player:teamMembers)
+        {
+            player->gainExperience(expAmount);
+            if(player->getExp()>=100){
+                player->levelUp();
+                lvlUp = true;
+            }
+        }
+        expAmount = 0;
+        if(lvlUp){
+            for(Enemy* enemy:enemies){
+                enemy->levelUp();
+            }
+        }
+        lvlUp = false;
+    }
+    else{
+        return;
+    }
 }

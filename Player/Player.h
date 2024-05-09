@@ -31,7 +31,7 @@ public:
     Action takeAction(vector<Enemy*> enemies);
     char* serialize();
     static Player* unserialize(char* buffer);
-    int getExperienceAmount(int level);
+    int getExp();
 private:
     char buffer[BUFFER_SIZE];
 };

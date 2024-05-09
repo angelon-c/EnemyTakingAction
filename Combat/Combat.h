@@ -21,11 +21,16 @@ private:
     vector<Player*> teamMembers;
     vector<Enemy*> enemies;
     priority_queue<Action> actions;
+    int expAmount=0;
+    bool lvlUp=false;
 
     void prepareCombat();
     Character* getTarget(Character* target);
     void registerActions();
     void executeActions();
+    int getExpAmount(Character* enemy);
+    void checkForLvlUp(Character* subscriber);
+
 
     void checkParticipantStatus(Character* participant);
     void checkForFlee(Character* character);

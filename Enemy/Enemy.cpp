@@ -100,7 +100,40 @@ Action Enemy::takeAction(vector<Player *> player) {
     return myAction;
 }
 
+void Enemy::levelUp() {
+    level++;
+    int counter = 3;
+    size_t options;
+    while(counter != 0){
 
+        options =rand()%3;
+
+        switch (options) {
+
+            case 0:
+                health += 2;
+                cout<<"Enemy Incrased it's health by 2 points"<<endl;
+                break;
+            case 1:
+                attack += 2;
+                cout<<"Enemy Increased it's attack by 2 points"<<endl;
+                break;
+            case 2:
+                defense += 2;
+                cout<<"Enemy Increased it's defense by 2 points"<<endl;
+                break;
+            case 3:
+                speed += 2;
+                cout<<"Enemy Incrased it's speed by 2 points"<<endl;
+                break;
+            default:
+                cout << options << " Is not an option" << endl;
+                break;
+        }
+        counter--;
+    }
+    cout<<"Enemies got stronger!"<<endl;
+}
 
 
 
