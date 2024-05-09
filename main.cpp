@@ -7,7 +7,7 @@ int main() {
 
     Player *player = new Player("Victor", 50, 50, 3, 9);
     Enemy *enemy = new Enemy("Goblin", 20, 9, 3, 7, 10);
-    Enemy *enemy2 = new Enemy("Orc", 500, 8, 5, 2, 2);
+    Enemy *enemy2 = new Enemy("Orc", 100, 8, 5, 2, 2);
 
     vector<Character*> participants;
     participants.push_back(player);

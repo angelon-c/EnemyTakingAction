@@ -26,7 +26,7 @@ public:
 
     virtual void doAttack(Character *target) = 0;
     virtual void takeDamage(int damage) = 0;
-
+    virtual void levelUp()=0;
     void setName(char const *);
     char const * getName();
     void setHealth(int);
@@ -45,6 +45,7 @@ public:
     bool hasFleed();
     bool hasDied();
     int getLevel();
+
 
 
 };
